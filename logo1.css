@@ -1,0 +1,44 @@
+body
+	{
+	background: black;
+	color: green;
+	}
+
+#comhistpart
+	{
+	position: absolute;
+	width: 30%;
+	right: 0;	
+	background: orange;
+	color: purple;
+	overflow-y: scroll;
+	}
+
+#canvaspart
+	{
+	position: absolute;
+	width: 65%;
+	left: 0;
+	}
+
+#canvasandhistory
+	{
+	position: absolute;
+	height: 75%;
+	width: 100%;
+	}
+
+#commandpart
+	{
+	width: 90%;
+	height: 20%;
+	position: absolute;
+	bottom: 0;
+	background: gray;
+	color: black;
+	}
+
+#drawhere
+	{
+	background: lightgray;
+	}

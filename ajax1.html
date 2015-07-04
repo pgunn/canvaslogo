@@ -1,0 +1,71 @@
+<!doctype html>
+<html><head><title>HTML 5 Ajax test</title></head>
+<script>
+
+<!--
+window.onload = function()
+	{
+	document.getElementById("cmd").onchange = function() {process(); clean();};
+	};
+
+function process()
+{
+var cmd = document.getElementById("cmd").value;
+//try
+	{ // Hoping the try block will limit scope of a failure
+	urlpartreplace(cmd);
+	var myfetch = new XMLHttpRequest();
+	myfetch.open("GET", cmd, false); // Normally last param should be true and we specify a callback
+	myfetch.send(); // Dying here, it seems
+	loadpartreplace(myfetch.responseText); // responseXML for XML docs
+	}
+//catch(error)
+//	{
+//	}
+}
+
+function loadpartreplace(content)
+{
+document.getElementById("drawhere").textContent = content;
+}
+
+function urlpartreplace(content)
+{
+document.getElementById("url").textContent = content;
+}
+
+function clean()
+{
+document.getElementById("cmd").value = "";
+}
+
+-->
+
+
+</script>
+<style type="text/css">
+@import url("logo1.css");
+</style>
+
+
+
+
+<body>
+
+<div id="canvasandhistory">
+	<div id="loadpart">
+		The content:<br />
+		<div id="drawhere" width="400" height="400">
+		Load content here
+		</div>
+	</div>
+</div>
+
+<div id="commandpart">
+	Please enter a local URL to retrieve (must match submitting site):
+		Your bidding: <input type="search" name="cmd" id="cmd"/><br />
+	<span id="url">URL</span>
+</div>
+
+</body>
+</html>
